@@ -1,0 +1,82 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
+
+.footer-language-selector {
+	box-sizing: border-box;
+	// padding: 8px 20px;
+	position: relative;
+
+	&--active {
+		background-color: $darkgrayBtnLanguage;
+		border: 2px solid $white;
+		border-radius: 10px;
+		padding: 8px 20px;
+
+		.language-selector__button {
+			color: $white;
+		}
+
+		.language-selector__list-item {
+			border-radius: 10px;
+			width: 100%;
+		}
+	}
+
+	&__button {
+		@extend .text-secondary;
+		background: none;
+		border: none;
+		color: $white08;
+		display: flex;
+		font-family: $f-semibold;
+	}
+
+	&__button-arrow {
+		align-self: center;
+		margin-left: 10px;
+
+		&--active {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__list {
+		border-color: $white;
+		border-radius: 0 0 10px 10px;
+		border-style: solid;
+		border-width: 0 2px 2px;
+		display: flex;
+		flex-direction: column;
+		left: -2px;
+		list-style: none;
+		margin: 0;
+		opacity: 0;
+		padding: 0;
+		position: absolute;
+		right: -2px;
+		transition: all 0.3s;
+		visibility: hidden;
+
+		&--active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__list-item {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__list-item-button {
+		@extend .text-secondary;
+		background: none;
+		border: none;
+        // border: 5px solid red;
+		color: $white;
+		font-family: $f-semibold;
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+}

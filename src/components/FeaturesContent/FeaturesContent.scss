@@ -1,0 +1,75 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
+
+.features__content {
+	@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: center;
+	margin: -10px;
+	padding: 15px;
+
+	@include mob() {
+		padding: 10px;
+	}
+
+	&-block {
+		--cards-per-line: 3;
+		@include fluid-size('padding-top', $min-vw, $max-vw, 20px, 40px);
+		@include fluid-size('padding-left', $min-vw, $max-vw, 25px, 40px);
+		@include fluid-size('padding-right', $min-vw, $max-vw, 25px, 40px);
+		@include fluid-size('padding-bottom', $min-vw, $max-vw, 25px, 40px);
+		background: $white;
+		border-radius: 10px;
+		box-shadow: -20px 20px 60px #c8cfeb;
+		box-sizing: border-box;
+		margin: 15px;
+		width: calc(100%/var(--cards-per-line) - 30px);
+
+		@include response(max, 780) {
+			--cards-per-line: 2;
+			box-sizing: border-box;
+			padding: 20px;
+			// width: 48%;
+		}
+        
+		@include mob() {
+			--cards-per-line: 1;
+			// width: 98%;
+			margin: 0;
+			margin-bottom: 30px;
+		}
+
+		&-image {
+			@include fluid-size('max-width', $min-vw, $max-vw, 40px, 75px);
+			max-width: 40px;
+
+			img {
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+		}
+
+		&-title {
+			@extend h4;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 15px, 20px);
+			margin: 0;
+		}
+
+		&-text {
+			@extend .text-secondary;
+			color: $darkgray05;
+			margin-top: 10px;
+		}
+
+		
+	}
+
+	&-block-image {
+		height: auto;
+		width: 100%;
+	}
+}

@@ -1,0 +1,151 @@
+backend:
+  name: github
+  repo: otakoyi-rpg/EasyPoint
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: static/img
+public_folder: /img
+
+i18n:
+  structure: single_file
+  locales: [en, jp]
+
+collections:
+  - name: 'components'
+    label: 'Components'
+    i18n: true
+    files: 
+      - label: "Header"
+        name: "header"
+        file: "content/header.md"
+        i18n: true
+        fields: 
+          - {label: "Header Logo", name: "logo", widget: "image", i18n: duplicate}
+          - {label: "Shopify button text", name: "shopify_btn", widget: "string", i18n: true}
+          - {label: "Shopify button url", name: "shopify_btn_url", widget: "string", i18n: duplicate}
+          - {label: "Demo button text", name: "demo_btn", widget: "string", i18n: true}
+          - {label: "Demo button url", name: "demo_btn_url", widget: "string", i18n: duplicate}
+          - label: "Navigation"
+            name: "navigation"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Navigation item text", name: "nav_item_txt", widget: "string", i18n: true}
+              - {label: "Navigation item hash", name: "nav_item_hash", widget: "string", i18n: true}
+          - label: "Languages"
+            name: "languages"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Language item text", name: "lang_item_txt", widget: "string", i18n: true}
+              - {label: "Language item key", name: "lang_item_key", widget: "string", i18n: true}
+      - label: "Home"
+        name: "home"
+        file: "content/home.md"
+        i18n: true
+        fields:
+              - {label: "Title before mark text", name: "title_before", widget: "string", i18n: true}
+              - {label: "Mark text", name: "mark_text", widget: "string", i18n: true}
+              - {label: "Title after mark text", name: "title_after", widget: "string", i18n: true}
+              - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
+              - {label: "Home Button", name: "button", widget: "string", i18n: true}
+              - label: "Home brands"
+                name: "home_brands"
+                widget: list
+                i18n: true
+                allow_add: true
+                fields:
+                  - {label: "Icon", name: "icon", widget: "image", i18n: duplicate}
+      - label: "How it work"
+        name: "how-it-work"
+        file: "content/how-it-work.md"
+        i18n: true
+        fields: 
+          - {label: "How it work video", name: "video", widget: "file", i18n: duplicate}
+          - {label: "How it work anchor", name: "anchor", widget: "string", i18n: true}
+          - {label: "How it work title", name: "title", widget: "string", i18n: true}
+          - {label: "How it work subtitle", name: "subtitle", widget: "string", i18n: true}
+          - {label: "How it work background", name: "background", widget: "image", i18n: duplicate}
+          - {label: "How it work poster video", name: "poster", widget: "image", i18n: duplicate}
+          - {label: "How it work poster graph", name: "graph", widget: "image", i18n: duplicate}
+          - label: "How it works slider"
+            name: "how-it-works-slider"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Icon", name: "icon", widget: "image", i18n: duplicate}
+              - {label: "Title", name: "title", widget: "string", i18n: true}
+              - {label: "Text", name: "text", widget: "string", i18n: true}
+      - label: "Features"
+        name: "features"
+        file: "content/features.md"
+        i18n: true
+        fields: 
+          - {label: "Anchor", name: "anchor", widget: "string", i18n: true}
+          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
+          - label: "Features Blocks"
+            name: "features_block"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Icon", name: "icon", widget: "image", i18n: duplicate}
+              - {label: "Title", name: "title", widget: "string", i18n: true}
+              - {label: "Text", name: "text", widget: "string", i18n: true}
+              - label: "Features Blocks"
+                name: "features_blocks"
+                widget: list
+                i18n: true
+                allow_add: true
+                fields:
+                  - {label: "Icon", name: "icon", widget: "image", i18n: duplicate}
+                  - {label: "Title", name: "title", widget: "string", i18n: true}
+                  - {label: "Text", name: "text", widget: "string", i18n: true}
+      - label: "What we offer"
+        name: "what_we_offer"
+        file: "content/what-we-offer.md"
+        i18n: true
+        fields: 
+          - {label: "Background", name: "background", widget: "image", i18n: duplicate}
+          - {label: "Anchor", name: "anchor", widget: "string", i18n: true}
+          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
+          - {label: "Double Button first text", name: "double_first", widget: "string", i18n: true}
+          - {label: "Double Button second text", name: "double_second", widget: "string", i18n: true}
+          - {label: "Graph", name: "graph", widget: "image", i18n: duplicate}
+          - {label: "List title", name: "list_title", widget: "string", i18n: true}
+          - label: "What we offer list item"
+            name: "list_item"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Item status", name: "status", widget: "boolean", i18n: true}
+              - {label: "Item content", name: "cont", widget: "string", i18n: true}
+          - {label: "Button text", name: "button", widget: "string", i18n: true}
+      - label: "Benefits"
+        name: "benefits"
+        file: "content/benefits.md"
+        i18n: true
+        fields: 
+          - {label: "Anchor", name: "anchor", widget: "string", i18n: true}
+          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
+          - label: "Benefits Block"
+            name: "benefits_block"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Image", name: "image", widget: "image", i18n: true}
+              - {label: "Title", name: "title", widget: "string", i18n: true}
+              - {label: "Text", name: "text", widget: "string", i18n: true}
+          - {label: "Benefit bottom title", name: "benefit_bottom_title", widget: "string", i18n: true}
+          - {label: "Benefit bottom subtitle", name: "benefit_bottom_subtitle", widget: "string", i18n: true}
+          - {label: "Benefit bottom button", name: "button", widget: "string", i18n: true}
+          - {label: "Benefit bottom background", name: "background_bottom", widget: "image", i18n: duplicate}
+          

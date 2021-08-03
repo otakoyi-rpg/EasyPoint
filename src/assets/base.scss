@@ -1,0 +1,16 @@
+body {
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.container {
+	box-sizing: border-box;
+	margin: auto;
+	max-width: 1320px;
+	padding: 0 15px;
+	width: 100%;
+	// background: green;
+}

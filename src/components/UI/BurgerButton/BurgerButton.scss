@@ -1,0 +1,43 @@
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+@import '../../../assets/typography.scss';
+
+.burger-button {
+	align-items: center;
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	height: 46px;
+
+	&__icon-wrapper {
+		display: flex;
+		flex-direction: column;
+		height: 8px;
+		justify-content: space-between;
+		transition: all 0.3s;
+	}
+
+	&__line {
+		background: $black-08;
+		height: 2px;
+		transition: all 0.3s;
+		width: 25px;
+	}
+
+	&--active {
+		.burger-button__icon-wrapper {
+			justify-content: center;
+		}
+
+		.burger-button__line {
+			&:first-child {
+				transform: rotate(45deg) translateY(1px);
+			}
+
+			&:last-child {
+				transform: rotate(-45deg) translateY(-1px);
+			}
+		}
+	}
+}

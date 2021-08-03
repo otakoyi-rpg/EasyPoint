@@ -1,0 +1,43 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
+
+.features {
+	@include fluid-size('padding-bottom', $min-vw, $max-vw, 80px, 140px);
+
+	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
+	&__header {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		
+		max-width: 850px;
+		text-align: center;
+
+		&-anchor {
+			@extend .label-primary;
+			background: $purple-main01;
+			border-radius: 2px;
+			color: $purple-main;
+			margin: 0;
+			padding: 4px 10px;
+		}
+
+		&-title {
+			@extend h2;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 15px);
+			color: $darkgray;
+			margin: 0;
+
+		}
+
+		&-text {
+			@extend .text-main;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 20px);
+			color: $darkgray05;
+			margin: 0;
+			max-width: 630px;
+		}
+	}
+}

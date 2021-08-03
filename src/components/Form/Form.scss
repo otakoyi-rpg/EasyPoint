@@ -1,0 +1,132 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
+
+.form {
+	@include fluid-size('padding-bottom', $min-vw, $max-vw, 80px, 140px);
+	position: relative;
+
+	form {
+		margin: 0 auto;
+		max-width: 850px;
+
+		@include  mob() {
+			width: 100%;
+		}
+	}
+
+	&__background {
+		height: 100%;
+		left: 0;
+		position: absolute !important;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+
+		img {
+			object-position: top;
+		}
+	}
+
+	&__header {
+		@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
+
+		align-items: center;
+		color: $white;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		max-width: 850px;
+		text-align: center;
+
+
+		&-anchor {
+			@extend .label-primary;
+			background: $dark01;
+
+			border-radius: 2px;
+			margin: 0;
+			padding: 4px 10px;
+		}
+
+		&-title {
+			@extend h2;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 15px);
+			margin: 0;
+
+		}
+
+		&-text {
+			@extend .text-main;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 20px);
+			@include fluid-size('margin-bottom', $min-vw, $max-vw, 40px, 60px);
+			color: $white08;
+			margin: 0;
+			max-width: 630px;
+		}
+	}
+
+
+	&__button button {
+		@include fluid-size('margin-top', $min-vw, $max-vw, 20px, 40px);
+
+	}
+
+	
+	&__data-user {
+		display: flex;
+		
+		label:first-child{
+			margin-right: 30px;
+
+			@include mob(){
+				margin-right: unset;
+				margin-bottom: 15px;
+			}
+		}
+
+		@include mob() {
+			flex-wrap: wrap;
+		}
+
+		label {
+			width: 50%;
+
+			@include mob() {
+				margin-bottom: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	&__data-user-select-description {
+		color: $white;
+		display: block;
+		padding-bottom: 3px;
+		@extend .text-secondary;
+
+		&-active {
+			color: $red1;
+		}
+	}
+
+	&__customer {
+		display: flex;
+		flex-direction: column;
+
+		@include mob() {
+			margin-top: 20px;
+		}
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+	}
+
+	// .select-span {
+	// 	margin-top: 32px;
+	// 	color: coral;
+	// 	@extend .label-secondary;
+	// }
+}

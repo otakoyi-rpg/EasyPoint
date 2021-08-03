@@ -1,0 +1,65 @@
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+@import '../../../assets/typography.scss';
+
+
+.span-label {
+	display: block;
+	padding-bottom: 5px;
+}
+
+.input {
+	background: rgba(255, 255, 255, 0.1);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	box-sizing: border-box;
+	color: $white05;
+	padding: 15px 20px;
+	width: 100%;
+	@extend .text-secondary;
+
+
+	&::placeholder {
+		color: $white05;
+		@extend .text-secondary;
+	}
+
+	&:focus,
+	&:hover {
+		background: rgba(255, 255, 255, 0.2);
+		border: 2px solid $white;
+		border-radius: 10px;
+		box-sizing: border-box;
+		color: $white;
+		outline: none;
+	} 
+
+	&__error {
+		background: $red01;
+		border: 2px solid rgba(211, 41, 72, 0.4);
+		border-radius: 10px;
+		box-sizing: border-box;
+		@extend .label-secondary;
+	}
+}
+
+.label {
+	@extend .text-secondary;
+
+	color: $white;
+	margin-bottom: 25px;
+
+	&__error {
+		color: $red1;
+	}
+}
+
+.error__bottom-label {
+	@extend .label-secondary;
+
+}
+
+.form-selector__span-error{
+	margin-top: 10px;
+
+}

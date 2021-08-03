@@ -1,0 +1,132 @@
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+@import '../../../assets/typography.scss';
+
+.form-selector {
+	// padding: 8px 15px;
+	position: relative;
+	z-index: 1;
+
+	&__error {
+		background: rgba(211, 41, 72, 0.1);
+		border: 2px solid rgba(211, 41, 72, 0.4);
+
+		&__button {
+			color: rgba(255, 255, 255, 0.5);
+		}
+
+		.form-selector__button-arrow path {
+			fill: $red1;
+		}
+	}
+
+	&:hover {
+		// border: 2px solid $white;
+	}
+
+	&--active .form-selector__button {
+		background-color: #434445;
+		border: 2px solid $white;
+
+		border-radius: 10px;
+
+		.form-selector__button {
+			color: $white;
+		}
+
+		.form-selector__list-item {
+			border-radius: 10px;
+			width: 100%;
+		}
+	}
+
+	&__button {
+		@extend .text-secondary;
+		background: red;
+		background: rgba(255, 255, 255, 0.1);
+		border: 2px solid rgba(255, 255, 255, 0.2);
+		border-radius: 10px;
+		box-sizing: border-box;
+		color: $white05;
+		display: flex;
+		font-family: $f-semibold;
+		justify-content: space-between;
+		padding: 15px 20px;
+		width: 100%;
+
+		
+		
+		&:hover {
+			// background: rgba(255, 255, 255, 0.2);
+			background: #434445;
+			border: 2px solid $white;
+			color: $white;
+
+		}
+
+		&:hover .form-selector__button-arrow path {
+			fill: $white;
+		}
+	}
+
+	&__button-arrow {
+		align-self: center;
+		margin-left: 10px;
+
+		&--active {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__list {
+		background: #434445;
+		border: 2px solid $white;
+		border-radius: 0 0 10px 10px;
+		border-style: solid;
+		border-width: 0 2px 2px;
+		display: flex;
+		flex-direction: column;
+		left: 0px;
+		list-style: none;
+		margin: 0;
+		opacity: 0;
+		padding: 0;
+		padding-top: 12px;
+		padding-bottom: 10px;
+		position: absolute;
+		right: 0px;
+		top: 43px;
+		transition: all 0.3s;
+		visibility: hidden;
+		z-index: -1;
+
+		&--active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__list-item {
+		// display: flex;
+		// justify-content: center;
+		padding-left: 20px;
+	}
+
+	&__list-item-button {
+		@extend .text-secondary;
+
+		background: none;
+		border-style: none;
+		// color: $black-08;
+		color: $white;
+		font-family: $f-semibold;
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+
+	&__span-error {
+		color: $red1;
+		@extend .label-secondary;
+
+	}
+}

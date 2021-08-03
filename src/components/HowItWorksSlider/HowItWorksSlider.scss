@@ -1,0 +1,143 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
+
+.container {
+	.swiper-wrapper .swiper-slide {
+		height: auto;
+	}
+
+	.slide {
+		height: 100%;
+	}
+}
+
+.how-it-works__slider {
+	@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
+	@include fluid-size('padding-bottom', $min-vw, $max-vw, 40px, 60px);
+}
+
+.slide {
+	@include fluid-size('padding-top', $min-vw, $max-vw, 20px, 30px);
+	@include fluid-size('padding-bottom', $min-vw, $max-vw, 35px, 40px);
+	@include fluid-size('padding-right', $min-vw, $max-vw, 25px, 40px);
+	@include fluid-size('padding-left', $min-vw, $max-vw, 25px, 40px);
+	align-items: flex-start;
+	background: $purple-main;
+	border-radius: 10px;
+	box-shadow: -20px 20px 60px #101112;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+
+	@include mob() {
+		flex-direction: row;
+	}
+
+	&__image-wrapper {
+		flex: 0 0 auto;
+	}
+
+	&__image {
+		@include fluid-size('padding-top', $min-vw, $max-vw, 12px, 22px);
+		@include fluid-size('padding-bottom', $min-vw, $max-vw, 12px, 22px);
+		@include fluid-size('padding-right', $min-vw, $max-vw, 12px, 20px);
+		@include fluid-size('padding-left', $min-vw, $max-vw, 12px, 20px);
+		align-items: center;
+		// background: $dark01;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+
+		
+		@include tab-des() {
+			height: 60px;
+			width: 60px;
+		}
+
+		@include tab() {
+			height: 50px;
+			width: 50px;
+		}
+
+		@include mob() {
+			height: 40px;
+			width: 40px;
+		}
+		
+
+		@include mob() {
+			margin-right: 15px;
+		}
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	&__title {
+		@extend h4;
+		@include fluid-size('margin-top', $tab-des-vw, $max-vw, 15px, 20px);
+		color: $white;
+		margin: 0;
+
+		@include mob() {
+			margin-top: 5px;
+		}
+	}
+
+	&__text {
+		@extend .text-secondary;
+		color: $white08;
+		margin: 0;
+		margin-top: 10px;
+	}
+}
+
+.how-it-works .swiper-pagination-bullet {
+	background: $white04;
+	font-size: 12px;
+	height: 12px;
+	line-height: 20px;
+	opacity: 1;
+	text-align: center;
+	visibility: hidden;
+	width: 12px;
+
+	@include mob-tab() {
+		visibility: visible;
+	}
+}
+
+.how-it-works .swiper-pagination-bullet-active {
+	@include mob-tab() {
+		background: $white;
+	}
+}
+
+.how-it-works .swiper-slide:not(.swiper-slide-visible) {
+	opacity: 1;
+}
+
+.how-it-works .slide {
+	@include mob() {
+		@include fluid-size('width', 320px, 579px, 290px, 420px);
+		margin: 0 auto;
+	}
+}
+
+.how-it-works .slide .gatsby-image-wrapper-constrained {
+	@include mob-tab() {
+		width: 20px;
+	}
+	@include mob() {
+		width: 20px;
+	}
+}
+
+.how-it-works .swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: 25px;
+}

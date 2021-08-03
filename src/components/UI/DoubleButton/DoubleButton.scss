@@ -1,0 +1,42 @@
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+@import '../../../assets/typography.scss';
+
+.switch {
+	border-radius: 50px;
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	// background-color: aquamarine;
+
+
+	&__wrapper {
+		background: $purple-gradient;
+		border-radius: 50px;
+		box-sizing: border-box;
+		padding: 23px;
+		position: absolute;
+		z-index: -1;
+	}
+    
+}
+
+.double-button {
+	@extend .label-primary;
+	background: none;
+	border-style: none;
+	box-sizing: border-box;
+	padding: 13px 30px;
+	color: $white;
+
+	&__active-one {
+		left: 0;
+		right: auto;
+	}
+
+	&__active-two {
+		right: 0;
+		left: auto;
+	}
+
+}

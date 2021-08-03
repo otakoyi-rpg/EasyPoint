@@ -1,0 +1,211 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
+
+.what-we-offer {
+	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
+	position: relative;
+
+	svg {
+		flex: 0 0 auto;
+	}
+
+	&__background {
+		height: 100%;
+		left: 0;
+		position: absolute !important;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+
+		img {
+			object-position: top;
+		}
+	}
+
+	&__header {
+		align-items: center;
+		color: $white;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		max-width: 850px;
+		text-align: center;
+
+
+		&-anchor {
+			@extend .label-primary;
+			background: $dark01;
+
+			border-radius: 2px;
+			margin: 0;
+			padding: 4px 10px;
+		}
+
+		&-title {
+			@extend h2;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 15px);
+			margin: 0;
+
+		}
+
+		&-text {
+			@extend .text-main;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 20px);
+			@include fluid-size('margin-bottom', $min-vw, $max-vw, 40px, 60px);
+
+			margin: 0;
+			max-width: 630px;
+		}
+	}
+
+	&__content {
+		@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
+		box-sizing: border-box;
+		display: flex;
+		gap: 30px;
+		padding-bottom: 50px;
+
+		@include tab() {
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+
+	&__content-graph {
+		box-sizing: border-box;
+		padding: 60px;
+		position: relative;
+		width: 100%;
+		z-index: 1;
+		
+
+		&::before {
+			background: #1a1b1b;
+			border-radius: 10px;
+
+			box-shadow: -20px 20px 60px #101112;
+			content: '';
+			height: calc(100% - 120px);
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: -2;
+
+			@include mob() {
+				height: 0;
+				width: 0;
+			}
+		}
+
+		&::after {
+			background: #232425;
+			border-radius: 10px;
+			box-shadow: -20px 20px 60px #101112;
+			content: '';
+			height: calc(100% - 120px);
+			left: 30px;
+			position: absolute;
+			top: 30px;
+			width: calc(100% - 60px);
+			z-index: -1;
+
+			@include mob() {
+				left: 40px;
+				width: calc(100% - 80px);
+			}
+
+		}
+
+	}
+
+	&__content-custom {
+		width: 100%;
+        
+		&-button {
+			@include tab() {
+    
+				display: flex;
+				justify-content: center;
+			}
+		}
+
+		&-title {
+			@extend h3;
+			color: $white;
+			margin: 0;
+            
+			@include tab() {
+				text-align: center;
+			}
+		}
+
+		&-list {
+			@include fluid-size('margin-top', $min-vw, $max-vw, 20px, 30px);
+			@include fluid-size('margin-bottom', $min-vw, $max-vw, 21px, 55px);
+			list-style: none;
+			margin: 0;
+			margin-bottom: 54px;
+			padding: 0;
+
+			@include tab() {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 15px 30px;
+				justify-content: center;
+			}
+            
+			@include mob() {
+				flex-direction: column;
+				flex-wrap: nowrap;
+			}
+
+		}
+
+		&-list-item {
+			svg {
+				height: 30px !important;
+				width: 30px !important;
+			}
+			align-items: center;
+			color: $white08;
+			display: flex;
+			margin-top: 15px;
+
+			@include tab() {
+				margin-top: 0;
+				width: 45%;
+
+			}
+			@include mob() {
+				width: 100%;
+			}
+
+			&-text {
+				@include fluid-size('margin-left', $min-vw, $max-vw, 10px, 15px);
+				@extend .text-main; 
+
+			}
+
+			
+		}
+		
+	}
+
+	&-button {
+		@include tab() {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+ 
+   
+}
+
+// .what-we-offer__checkbox {
+// 	flex: 25px 0 0;
+// 	height: 25px;
+// }
+

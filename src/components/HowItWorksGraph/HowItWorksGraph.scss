@@ -1,0 +1,67 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
+
+.how-it-works-graph {
+	display: flex;
+	justify-content: center;
+
+	&__image {
+		margin: auto;
+		margin-top: 80px;
+		position: relative;
+		width: calc(100% - 120px);
+		@include fluid-size('margin-bottom', $min-vw, $max-vw, 80px, 140px);
+
+		@include mob() {
+			width: calc(100% - 60px);
+
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		&::before {
+			background: $black-elements;
+			border-radius: 10px;
+			box-shadow: -20px 20px 60px #101112;
+			content: '';
+			height: 100%;
+			left: -30px;
+			position: absolute;
+			top: -30px;
+			width: calc(100% + 60px);
+			z-index: -1;
+
+
+			@include mob() {
+				left: -10px;
+				right: -10px;
+				top: -20px;
+				width: calc(100% + 20px);
+			}
+
+		}
+
+		&::after {
+			background: #1a1b1b;
+			border-radius: 10px;
+			box-shadow: -20px 20px 60px #101112;
+			content: '';
+			height: 100%;
+			left: -60px;
+			position: absolute;
+			top: -60px;
+			width: calc(100% + 120px);
+			z-index: -2;
+
+			@include mob() {
+				display: none;
+			}
+		}
+	}
+    
+    
+}

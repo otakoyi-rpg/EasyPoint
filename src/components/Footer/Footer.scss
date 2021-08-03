@@ -1,0 +1,194 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
+
+.footer-wraper {
+	background: black;
+	border-top: 2px solid rgba(0, 0, 0, 0.8);
+	@include fluid-size('padding-top', $min-vw, $max-vw, 60px, 80px);
+	@include fluid-size('padding-bottom', $min-vw, $max-vw, 45px, 60px);
+
+}
+
+.footer {
+	&__top {
+		align-items: center;
+		border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 40px;
+
+		@include mob() {
+			flex-direction: column;
+		}
+
+		&-language {
+			@include mob() {
+				box-sizing: border-box;
+				padding-left: 20%;
+			}
+		}
+	}
+
+	&__top-data {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		min-width: 75%;
+
+		@include tab() {
+			flex-wrap: wrap;
+			min-width: 41%;
+		}
+		
+		&>div {
+			@include mob() {
+				margin-bottom: 20px;
+			}
+		}
+
+		@include mob() {
+			min-width: 95%;
+		}
+
+		&-location {
+			@include mob() {
+				box-sizing: border-box;
+				padding-left: 20%;
+			}
+		}
+
+	}
+
+	&__top-data-contact-write,
+	&__top-data-location-description,
+	&__top-data-our-team {
+		color: $white05;
+		@extend .text-secondary ;
+	}
+
+	
+
+	&__top-data-contact-email,
+	&__top-data-location-town,
+	&__top-data-our-site {
+		color: $white;
+		@extend .text-main;
+	}
+	
+	&__top-data-contact-email-link,
+ 
+	&__top-data-our-site {
+		color: $white;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	@include tab() {
+		&__top-data-contact,
+		&__top-data-location,
+		&__top-data-our,
+		&__top-language {
+			width: 50%;
+		}
+	}
+
+	
+
+	&__bottom {
+		color: $white04;
+		display: flex;
+		justify-content: space-between;
+		padding-top: 40px;
+		@extend .label-primary ;
+
+		
+
+		@include mob-tab() {
+			align-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		&>div:first-child {
+			@include mob-tab() {
+				margin-bottom: 40px;
+			}
+		}
+
+		&-descriptions {
+			display: flex;
+
+			&>div:first-child {
+				margin-right: 50px;
+
+				@include tab() {
+					margin-right: 10px;
+				}
+
+				@include mob() {
+					margin-right: 50px;
+
+				}
+			}
+
+			@include mob-tab() {
+				justify-content: flex-end;
+			}
+
+			@include mob() {
+				order: -2;
+				margin-bottom: 30px;
+			}
+		}
+
+		&-rights,
+		&-descriptions {
+			@extend .text-secondary;
+			@include mob-tab() {
+				width: 50%;
+			}
+			@include mob() {
+				justify-content: flex-start;
+				width: 100%;
+				// margin-left: 5%;
+			}
+		}
+
+		&-rights {
+			@include mob() {
+				// text-align: center;
+				// margin-left: 5%;
+			}
+		}
+
+		&-logo {
+			justify-content: center;
+			text-align: center;
+
+			@include mob-tab() {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+			}
+
+			@include mob() {
+				justify-content: flex-start;
+			}
+		}
+	}
+
+	&__top-data-location,
+	&__top-language {
+		@include mob() {
+			align-items: center;
+			// margin-left: 5%;
+
+		
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+}

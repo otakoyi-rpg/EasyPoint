@@ -1,0 +1,218 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
+
+.benefits {
+	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
+	overflow: hidden;
+	&__header {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		max-width: 850px;
+		text-align: center;
+
+		&-anchor {
+			@extend .label-primary;
+			background: $purple-main01;
+			border-radius: 2px;
+			color: $purple-main;
+			margin: 0;
+			padding: 4px 10px;
+		}
+
+		&-title {
+			@extend h2;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 15px);
+			color: $darkgray;
+			margin: 0;
+
+		}
+
+		&-text {
+			@extend .text-main;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 20px);
+			color: $darkgray05;
+			margin: 0;
+			max-width: 630px;
+		}
+	}
+
+	&__main {
+		@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
+	overflow: hidden;
+		&-block {
+			@include fluid-size('margin-bottom', $min-vw, $max-vw, 80px, 100px);
+			box-sizing: border-box;
+			display: flex;
+	
+			&:nth-child(even) {
+				flex-direction: row-reverse;
+			}
+	
+			&:nth-child(odd) &-text {
+				padding-left: 70px;	
+			}
+	
+			@include tab() {
+				align-items: center;
+				flex-direction: column;
+	
+				&:nth-child(even) {
+					flex-direction: column;
+				}
+	
+				&:nth-child(odd) &-text {
+					padding-left: 0;	
+				}
+			}
+	
+			&-image {
+				position: relative;
+				width: 50%;
+				@include tab() {
+					margin-bottom: 50px;
+					width: 75%;
+				}
+				
+				@include mob-tab() {
+					width: 95%;
+				}
+				
+				img {
+					height: auto;
+					margin-left: 30px;
+					width: calc(100% - 30px);
+					@include mob(){
+						margin-left: 0;
+					}
+				}
+	
+				&::before {
+					background: #f5f7ff;
+					// background: red;
+					border-radius: 10px;
+					box-shadow: -20px 20px 60px #c8cfeb;
+					content: '';
+					height: 100%;
+					left: 0;
+					position: absolute;
+					top: -30px;
+					width: calc(100% - 40px);
+					z-index: -1;
+	
+
+					@include tab() {
+						top: -20px;
+					}
+
+					@include mob() {
+						left: 30px;
+						top: -20px;
+						width: calc(100% - 30px);
+					}
+				}
+			}
+	
+			&-text {
+				box-sizing: border-box;
+				// background: blueviolet;
+				flex-shrink: 0;
+				// padding-right: 60px;
+				width: 50%;
+	
+				@include tab() {
+					// align-items: center;
+					display: flex;
+					flex-direction: column;
+					width: 75%;
+				}
+				@include mob-tab() {
+					width: 95%;
+					
+				}
+	
+			}
+	
+			&-text-title {
+				@extend h3;
+				margin: 0;
+				max-width: 410px;
+			}
+	
+			&-text-paragraph {
+				@extend .text-main;
+				@include fluid-size('margin-top', $min-vw, $max-vw, 5px, 20px);
+				color: $darkgray05;
+				margin: 0;
+				max-width: 500px;
+	
+			}
+			
+		}
+	}
+
+	&__footer {
+		position: relative;
+
+		&-background {
+			height: 100%;
+			left: 0;
+			position: absolute !important;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+
+			img {
+				object-position: top;
+			}
+		}
+
+
+
+		&-header {
+			align-items: center;
+			color: $white;
+			display: flex;
+			flex-direction: column;
+			margin: auto;
+			max-width: 850px;
+			padding-top: 230px;
+			text-align: center;
+			@include fluid-size('padding-top', $min-vw, $max-vw, 120px, 230px);
+			@include fluid-size('padding-bottom', $min-vw, $max-vw, 90px, 210px);
+
+
+	
+	
+		
+	
+			&-title {
+				@extend h2;
+				@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 15px);
+				margin: 0;
+	
+			}
+	
+			&-text {
+				@extend .text-main;
+				@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 20px);
+				@include fluid-size('margin-bottom', $min-vw, $max-vw, 40px, 60px);
+				color: $white08;
+				margin: 0;
+				max-width: 630px;
+			}
+		}
+	
+
+
+	}
+
+	&__main-block-image-picture {
+		width: 100%;
+
+		
+	}
+}
+

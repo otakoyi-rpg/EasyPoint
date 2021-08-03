@@ -1,0 +1,94 @@
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixins.scss';
+@import '../../../assets/typography.scss';
+
+.menu {
+	border-radius: 10px;
+	box-shadow: -20px 20px 60px $box-shadow-menu;
+	@include tab() {
+		overflow-x: auto;
+	}
+	//   overflow-x: auto;
+	// background: red;
+	background: $white;
+}
+
+.menu-list {
+	border-radius: 10px;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+
+	@include mob-tab() {
+		flex-direction: row;
+	}
+
+	&__item {
+		@extend .text-secondary;
+		font-family: serif;
+		margin: 0;
+		padding: 0;
+		position: relative;
+
+		@include mob-tab() {
+			display: inline-block;
+		}
+
+		&:not(:last-child)::after {
+			background: $darkgray02;
+			bottom: -1px;
+			content: '';
+			height: 1px;
+			left: 30px;
+			position: absolute;
+			width: calc(100% - 60px);
+
+			@include mob-tab() {
+				bottom: unset;
+				content: '';
+				height: calc(100% - 40px);
+				left: unset;
+				right: -1px;
+				top: 20px;
+				width: 1px;
+			}
+		}
+
+		&--active:not(:last-child)::after {
+			content: none;
+		}
+	}
+
+	&__button {
+		background: none;
+		border-style: none;
+		box-sizing: border-box;
+		color: $darkgray05;
+		display: flex;
+		font-family: $f-black;
+		font-weight: 900;
+		height: 100%;
+		margin: 0;
+		padding: 20px 30px;
+		position: relative;
+		transition: all 0.35s;
+		width: 100%;
+
+		@extend .label-primary;
+
+		&:not(&--active):hover {
+			color: $darkgray;
+		}
+
+		&--active {
+			background: $purple-main;
+			border-radius: 10px;
+			color: $white;
+		}
+	}
+}

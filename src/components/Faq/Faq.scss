@@ -1,0 +1,68 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
+
+.faq {
+	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
+	@include fluid-size('padding-bottom', $min-vw, $max-vw, 80px, 140px);
+
+
+	&__title {
+		margin: 0;
+		text-align: center;
+	}
+
+	&__navigation {
+		display: flex;
+
+		&-menu{
+			margin-right: 30px;
+
+			@include mob-tab(){
+				margin-bottom: 20px;
+			}
+		}
+
+		
+
+		@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
+
+		@include mob-tab() {
+			flex-direction: column;
+		}
+
+		&-menu-button-btn {
+			width: 100%;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 20px, 30px);
+            
+			@include mob-tab() {
+				display: none;
+			}
+		}
+
+		&-menu-button {
+			@include mob-tab() {
+				display: none;
+			}
+		}
+	}
+
+	&__navigation-accordion {
+		align-items: center;
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+	}
+
+	&__navigation-accordion-button {
+		display: none;
+
+		@include mob-tab() {
+			display: block;
+			margin-top: 30px;
+		}
+	}
+
+
+}
+
