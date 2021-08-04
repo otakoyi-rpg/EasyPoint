@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: otakoyi-rpg/EasyPoint
+  repo: insurecar/easy-points
   branch: master # Branch to update (optional; defaults to master)
 
 media_folder: static/img
@@ -153,6 +153,131 @@ collections:
         file: "content/pricing.md"
         i18n: true
         fields: 
+          - {label: "Background", name: "background", widget: "image", i18n: duplicate}
           - {label: "Anchor", name: "anchor", widget: "string", i18n: true}
           - {label: "Title", name: "title", widget: "string", i18n: true}
-          - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}   
+          - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}  
+          - label: "Pricing Block"
+            name: "pricing_benefits_block"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields:
+              - {label: "Name", name: "name", widget: "string", i18n: true}
+              - {label: "Cost", name: "cost", widget: "number", i18n: duplicate}
+              - {label: "Per month", name: "permonth", widget: "string", i18n: true}
+              - {label: "After", name: "after", widget: "string", i18n: true}
+              - {label: "Currency", name: "currency", widget: "string", i18n: true}
+              - {label: "Period", name: "period", widget: "string", i18n: true}
+              - {label: "Active", name: "active", widget: "boolean", i18n: true}
+              - label: "Pricing Benefits"
+                name: "pricing_benefits"
+                widget: list
+                i18n: true
+                allow_add: true
+                fields: 
+                  - {label: "Benefits Item", name: "benefits_item", widget: "string", i18n: true}
+          - {label: "Background Bottom", name: "background_bottom", widget: "image", i18n: duplicate}
+          - {label: "Title Bottom", name: "title_bottom", widget: "string", i18n: true}
+          - {label: "Subtitle Bottom", name: "subtitle_bottom", widget: "string", i18n: true}
+          - {label: "Button Bottom", name: "button_bottom", widget: "string", i18n: true}
+      - label: "Feedback"
+        name: "feedback"
+        file: "content/feedback.md"
+        i18n: true
+        fields: 
+          - {label: "Anchor", name: "anchor", widget: "string", i18n: true}
+          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
+          - {label: "Button top", name: "button_top", widget: "string", i18n: true}
+          - {label: "Button top url", name: "button_top_url", widget: "string", i18n: duplicate}
+          - label: "Feedback Slider"
+            name: "feedback_slider"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields: 
+              - {label: "Brand Image", name: "brand", widget: "image", i18n: true}
+              - {label: "Type", name: "type", widget: "string", i18n: true}
+              - {label: "Text", name: "text", widget: "string", i18n: true}
+              - {label: "Hour", name: "hours", widget: "string", i18n: true}
+              - {label: "Date", name: "date", widget: "string", i18n: true}
+              - {label: "Rating", name: "rating", widget: "number", i18n: true, min: 1, max: 5}
+          - {label: "Bottom background", name: "bottom_background", widget: "image", i18n: duplicate}
+          - {label: "Google Play text", name: "google_text", widget: "string", i18n: true}
+          - {label: "App Store text", name: "apple_text", widget: "string", i18n: true}
+          - {label: "Bottom title", name: "bottom_title", widget: "string", i18n: true}
+          - {label: "Bottom subtitle", name: "bottom_subtitle", widget: "string", i18n: true}
+          - {label: "Bottom button text", name: "button", widget: "string", i18n: true}
+          - {label: "Bottom button url", name: "button_url", widget: "string", i18n: duplicate}
+          - {label: "Bottom image", name: "bottom_image", widget: "image", i18n: duplicate}
+      - label: "FAQ"
+        name: "faq"
+        file: "content/faq.md"
+        i18n: true
+        fields: 
+          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - label: "FAQ List Left"
+            name: "faq_list"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields: 
+              - {label: "Title Navigation Left", name: "title", widget: "string", i18n: true}
+              - label: "FAQ Accordion Right"
+                name: "children"
+                widget: list
+                i18n: true
+                allow_add: true
+                fields: 
+                  - {label: "Title Accordion", name: "title", widget: "string", i18n: true}
+                  - {label: "Subtitle Accordion", name: "content", widget: "string", i18n: true}
+          - {label: "Button", name: "button", widget: "string", i18n: true}
+          - {label: "Button", name: "button_url", widget: "string", i18n: true}
+      - label: "Contact"
+        name: "contact"
+        file: "content/contact.md"
+        i18n: true
+        fields: 
+          - {label: "Anchor", name: "anchor", widget: "string", i18n: true}
+          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
+          - {label: "Background", name: "background", widget: "image", i18n: duplicate}
+          - {label: "Label First Name", name: "label_first_name", widget: "string", i18n: true}
+          - {label: "Input First Name", name: "input_first_name", widget: "string", i18n: true}
+          - {label: "Label Last Name", name: "label_last_name", widget: "string", i18n: true}
+          - {label: "Input Last Name", name: "input_last_name", widget: "string", i18n: true}
+          - {label: "Label Email", name: "label_email", widget: "string", i18n: true}
+          - {label: "Input Email", name: "input_email", widget: "string", i18n: true}
+          - {label: "Label Subject", name: "label_subject", widget: "string", i18n: true}
+          - {label: "Input Subject", name: "input_subject", widget: "string", i18n: true}
+          - {label: "Label Message", name: "label_message", widget: "string", i18n: true}
+          - {label: "Input Message", name: "input_message", widget: "string", i18n: true}
+          - {label: "Label Shopify URL", name: "label_shopify_url", widget: "string", i18n: true}
+          - {label: "Input EmaShopify URL", name: "input_shopify_url", widget: "string", i18n: duplicate}
+          - {label: "Label Select", name: "label_select", widget: "string", i18n: true}
+          - {label: "Label Input", name: "input_select", widget: "string", i18n: true}
+          - label: "Select Item"
+            name: "options"
+            widget: list
+            i18n: true
+            allow_add: true
+            fields: 
+              - {label: "Option", name: "option", widget: "string", i18n: true}
+          - {label: "Submit button", name: "button", widget: "string", i18n: true}
+      - label: "Footer"
+        name: "footer"
+        file: "content/footer.md"
+        i18n: true
+        fields: 
+          - {label: "Footer logo", name: "logo", widget: "image", i18n: true} 
+          - {label: "Write us", name: "write_us", widget: "string", i18n: true} 
+          - {label: "Write us email", name: "write_us_email", widget: "string", i18n: true} 
+          - {label: "Location", name: "location", widget: "string", i18n: true} 
+          - {label: "Location", name: "location_city", widget: "string", i18n: true} 
+          - {label: "Our Team", name: "our_team", widget: "string", i18n: true} 
+          - {label: "Our Team", name: "our_team_url", widget: "string", i18n: duplicate} 
+          - {label: "Rights", name: "rights", widget: "string", i18n: true} 
+          - {label: "Terms and Conditions", name: "terms", widget: "string", i18n: true} 
+          - {label: "Privacy policy", name: "privacy", widget: "string", i18n: true} 
+          - {label: "Otakoyi", name: "otakoyi", widget: "image", i18n: duplicate} 
