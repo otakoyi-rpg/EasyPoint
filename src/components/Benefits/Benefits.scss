@@ -5,6 +5,45 @@
 .benefits {
 	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
 	overflow: hidden;
+
+	&__image-wrap {
+		position: relative;
+
+		&::before {
+			background: #f5f7ff;
+			// background: red;
+			border-radius: 10px;
+			box-shadow: -20px 20px 60px #c8cfeb;
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			z-index: -1;
+
+
+			@include tab() {
+				top: -20px;
+			}
+
+			@include mob() {
+				left: 30px;
+				top: -20px;
+				width: calc(100% - 30px);
+			}
+		}
+
+		img {
+			@include mob() {
+				left: 0 !important;
+				top: 0 !important;
+				width: calc(100% - 20px);
+			}
+		}
+
+	
+	}
+
 	&__header {
 		align-items: center;
 		display: flex;
@@ -41,14 +80,34 @@
 
 	&__main {
 		@include fluid-size('margin-top', $min-vw, $max-vw, 40px, 60px);
-	overflow: hidden;
+		// overflow: hidden;
+
 		&-block {
 			@include fluid-size('margin-bottom', $min-vw, $max-vw, 80px, 100px);
 			box-sizing: border-box;
 			display: flex;
+			justify-content: space-between;
+
 	
 			&:nth-child(even) {
 				flex-direction: row-reverse;
+
+				.benefits__image-wrap {
+					img {
+						left: 0;
+						top: 0;
+					}
+
+					&::before {
+						left: -30px;
+						top: -30px;
+
+						@include mob(){
+							left: 30px;
+						}
+					}
+				}
+				
 			}
 	
 			&:nth-child(odd) &-text {
@@ -70,7 +129,7 @@
 	
 			&-image {
 				position: relative;
-				width: 50%;
+				width: 47%;
 				@include tab() {
 					margin-bottom: 50px;
 					width: 75%;
@@ -81,38 +140,15 @@
 				}
 				
 				img {
+					display: block;
 					height: auto;
-					margin-left: 30px;
-					width: calc(100% - 30px);
-					@include mob(){
-						margin-left: 0;
-					}
+					left: 30px;
+					max-width: 100%;
+					position: relative;
+					top: 30px;
 				}
 	
-				&::before {
-					background: #f5f7ff;
-					// background: red;
-					border-radius: 10px;
-					box-shadow: -20px 20px 60px #c8cfeb;
-					content: '';
-					height: 100%;
-					left: 0;
-					position: absolute;
-					top: -30px;
-					width: calc(100% - 40px);
-					z-index: -1;
-	
-
-					@include tab() {
-						top: -20px;
-					}
-
-					@include mob() {
-						left: 30px;
-						top: -20px;
-						width: calc(100% - 30px);
-					}
-				}
+				
 			}
 	
 			&-text {
@@ -120,7 +156,7 @@
 				// background: blueviolet;
 				flex-shrink: 0;
 				// padding-right: 60px;
-				width: 50%;
+				width: 47%;
 	
 				@include tab() {
 					// align-items: center;

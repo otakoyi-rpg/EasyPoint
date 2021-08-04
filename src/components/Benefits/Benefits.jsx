@@ -81,7 +81,11 @@ const Benefits = () => {
 
             <div className="benefits__main-block" key={elem.title + elem.text} >
               <div className="benefits__main-block-image" data-aos="fade-up" data-aos-delay="250">
+                {/* <div className = 'benefits__wrap' ></div> */}
+                <div className = 'benefits__image-wrap' >
+
                 <img src={elem.image} alt="" className = "benefits__main-block-image-picture" />
+                </div>
               </div>
               <div className="benefits__main-block-text" data-aos="fade-up" data-aos-delay="250">
                 <h3 className="benefits__main-block-text-title">{elem.title}</h3>

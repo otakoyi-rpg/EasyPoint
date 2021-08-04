@@ -3,7 +3,7 @@ import './AppleLink.scss';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const AppleLink = () => {
+const AppleLink = ({text}) => {
   const {
     allImageSharp: { nodes },
   } = useStaticQuery(graphql`
@@ -27,7 +27,7 @@ const AppleLink = () => {
         <GatsbyImage image={getImage(nodes[0].gatsbyImageData)} alt="apple li" />
       </div>
       <div className="apple__text">
-        <div className="apple__text-download">Download on the</div>
+        <div className="apple__text-download">{text}</div>
         <div className="apple__text-name">
           <GatsbyImage image={getImage(nodes[1].gatsbyImageData)} alt="apple" />
 

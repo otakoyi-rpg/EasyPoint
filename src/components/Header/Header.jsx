@@ -34,10 +34,7 @@ const Header = () => {
                 demo_btn
                 shopify_btn_url
                 shopify_btn
-                languages {
-                  lang_item_key
-                  lang_item_txt
-                }
+               
                 navigation {
                   nav_item_hash
                   nav_item_txt
@@ -49,10 +46,7 @@ const Header = () => {
                 demo_btn_url
                 shopify_btn
                 shopify_btn_url
-                languages {
-                  lang_item_key
-                  lang_item_txt
-                }
+               
                 navigation {
                   nav_item_hash
                   nav_item_txt
@@ -119,7 +113,7 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <LanguageSelector className="language-selector" languages = {frontmatter[language].languages} />
+        <LanguageSelector className="language-selector" />
         <Button type="primaryViolet" text="Shopify App Store" href="#" />
         <Button type="secondary" text={frontmatter[language].demo_btn} href={frontmatter[language].demo_btn_url} />
       </div>

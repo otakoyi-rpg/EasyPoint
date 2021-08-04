@@ -148,4 +148,11 @@ collections:
           - {label: "Benefit bottom subtitle", name: "benefit_bottom_subtitle", widget: "string", i18n: true}
           - {label: "Benefit bottom button", name: "button", widget: "string", i18n: true}
           - {label: "Benefit bottom background", name: "background_bottom", widget: "image", i18n: duplicate}
-          
+      - label: "Pricing"
+        name: "pricing"
+        file: "content/pricing.md"
+        i18n: true
+        fields: 
+          - {label: "Anchor", name: "anchor", widget: "string", i18n: true}
+          - {label: "Title", name: "title", widget: "string", i18n: true}
+          - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}   

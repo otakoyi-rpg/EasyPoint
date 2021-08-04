@@ -1,105 +1,131 @@
-import React from 'react';
-import './Footer.scss';
-import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import LanguageSelector from '../LanguageSelector/LanguageSelector';
-import Location from '../images/Location';
-import { useI18next } from 'gatsby-plugin-react-i18next';
+import React from "react"
+import "./Footer.scss"
+import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import LanguageSelector from "../LanguageSelector/LanguageSelector"
+import Location from "../images/Location"
+import { useI18next } from "gatsby-plugin-react-i18next"
 
-const Footer = () => {
+const Footer = props => {
+  const { language } = useI18next()
 
-  const {language} = useI18next()
- 
-
-  const {allMarkdownRemark:{edges:[{node:{frontmatter}}]}} = useStaticQuery(graphql`
-  query Footer {
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/header.md$/"}}) {
-      edges {
-        node {
-          id
-          frontmatter {
-            jp {
-              logo
-              demo_btn_url
-              demo_btn
-              shopify_btn_url
-              shopify_btn
-              languages {
-                lang_item_key
-                lang_item_txt
+  const {
+    allMarkdownRemark: {
+      edges: [
+        {
+          node: { frontmatter },
+        },
+      ],
+    },
+  } = useStaticQuery(graphql`
+    query Footer {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/footer.md$/" } }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              jp {
+                logo
+                write_us
+                 write_us_email
+                 location
+                 location_city
+                 our_team
+                 our_team_url
+                 rights
+                 terms
+                 privacy
+                 otakoyi
               }
-              navigation {
-                nav_item_hash
-                nav_item_txt
-              }
-            }
-            en {
-              logo
-              demo_btn
-              demo_btn_url
-              shopify_btn
-              shopify_btn_url
-              languages {
-                lang_item_key
-                lang_item_txt
-              }
-              navigation {
-                nav_item_hash
-                nav_item_txt
+              en {
+                logo
+             write_us
+              write_us_email
+              location
+              location_city
+              our_team
+              our_team_url
+              rights
+              terms
+              privacy
+              otakoyi
               }
             }
           }
         }
       }
     }
-  }
-`);
+  `)
 
-
+  // console.log(data);
+  // console.log( 'post1', nodes);
 
   return (
-    <footer className="footer-wraper" id = 'footer'>
+    <footer className="footer-wraper" id="footer">
       <div className="container">
         <div className="footer__top">
-          {/* <GatsbyImage className="footer__top-logo" image={getImage(logo.gatsbyImageData)} alt="logo" /> */}
+          <img
+            src={frontmatter[language].logo}
+            alt=""
+            className="footer__top-logo"
+          />
           <div className="footer__top-data">
             <div className="footer__top-data-contact">
-              <div className="footer__top-data-contact-write">Write us</div>
+              <div className="footer__top-data-contact-write">
+                {frontmatter[language].write_us}
+              </div>
               <div className="footer__top-data-contact-email">
-                <a className="footer__top-data-contact-email-link" href="mailto:easypoints@lunaris.jp">
-                  easypoints@lunaris.jp
+                <a
+                  className="footer__top-data-contact-email-link"
+                  href="mailto:easypoints@lunaris.jp"
+                >
+                  {frontmatter[language].write_us_email}
                 </a>
               </div>
             </div>
             <div className="footer__top-data-location">
-              <div className="footer__top-data-location-description">Location</div>
+              <div className="footer__top-data-location-description">
+                {frontmatter[language].location}
+              </div>
               <div className="footer__top-data-location-town">
                 <Location />
-                Japan
+                {frontmatter[language].location_city}
               </div>
             </div>
             <div className="footer__top-data-our">
-              <div className="footer__top-data-our-team">Our team</div>
-              <div className="footer__top-data-our-site">teamlunaris.com</div>
+              <div className="footer__top-data-our-team">
+                {frontmatter[language].our_team}
+              </div>
+              <div className="footer__top-data-our-site">
+                {frontmatter[language].our_team_url}
+              </div>
             </div>
             <div className="footer__top-language">
-            <LanguageSelector className="language-selector footer_lang" languages = {frontmatter[language].languages} />
+              <LanguageSelector className="language-selector footer_lang"  />
             </div>
           </div>
         </div>
         <div className="footer__bottom">
-          <div className="footer__bottom-rights"> © 2020 Team Lunaris. All rights reserved</div>
+          <div className="footer__bottom-rights">
+            {frontmatter[language].right}
+          </div>
           <div className="footer__bottom-descriptions">
-            <div className="footer__bottom-descriptions-conditions">Terms and Conditions</div>
-            <div className="footer__bottom-descriptions-policy">Privacy policy</div>
+            <div className="footer__bottom-descriptions-conditions">
+              {frontmatter[language].therms}
+            </div>
+            <div className="footer__bottom-descriptions-policy">
+              {frontmatter[language].privacy}
+            </div>
           </div>
           <div className="footer__bottom-logo">
-            {/* <GatsbyImage image={getImage(otakoyi.gatsbyImageData)} alt = "otakoyi" /> */}
+            <img src={frontmatter[language].otakoyi} alt="" />
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

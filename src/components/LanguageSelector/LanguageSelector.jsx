@@ -3,9 +3,37 @@ import './LanguageSelector.scss';
 import classnames from 'classnames';
 import {Link, useI18next} from 'gatsby-plugin-react-i18next';
 import Arrow from '../images/Arrow';
+import { useStaticQuery, graphql } from 'gatsby';
+
 
 const LanguageSelector = ({languages,className}) => {
   const {originalPath, language} = useI18next();
+
+  const {allMarkdownRemark:{edges:[{node:{frontmatter}}]}} = useStaticQuery(graphql`
+  query Language {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/header.md$/"}}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            jp {
+              languages {
+                lang_item_txt
+                lang_item_key
+              }
+            }
+            en {
+              languages {
+                lang_item_txt
+                lang_item_key
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`);
 
   const [toggle, setToggle] = useState(false);
 
@@ -14,11 +42,11 @@ const LanguageSelector = ({languages,className}) => {
   });
 
   const activeLang = useMemo(() => {
-    return languages.filter((lang) => lang.lang_item_key === language)
+    return frontmatter[language].languages.filter((lang) => lang.lang_item_key === language)
   },[language])
 
   const unactiveLang = useMemo(() => {
-    return languages.filter((lang) => lang.lang_item_key !== language)
+    return frontmatter[language].languages.filter((lang) => lang.lang_item_key !== language)
   },[language])
 
   return (

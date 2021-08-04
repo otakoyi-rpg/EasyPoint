@@ -68,43 +68,7 @@ const WhatWeOffer = () => {
     }
   `)
 
-  //   const data = useStaticQuery(graphql`
-  //   query HowItWorks333 {
-  //     background: imageSharp(fluid: { originalName: { eq: "whatWeOfferBackground.png" } }) {
-  //       gatsbyImageData
-  //     }
-  //     image: imageSharp(fluid: { originalName: { eq: "whatWeOfferGraph.png" } }) {
-  //       gatsbyImageData
-  //     }
-  //   }
-  // `);
 
-  const content = [
-    {
-      status: true,
-      cont: "Customizable integrations with your shop’s branding",
-    },
-    {
-      status: true,
-      cont: "Easy to understand and use",
-    },
-    {
-      status: true,
-      cont: "Point display on product pages",
-    },
-    {
-      status: true,
-      cont: "Better user experience and engagement",
-    },
-    {
-      status: true,
-      cont: "Bonus features not available on widget",
-    },
-    {
-      status: false,
-      cont: "Quick to install",
-    },
-  ]
 
   return (
     <div className="what-we-offer">
@@ -151,7 +115,9 @@ const WhatWeOffer = () => {
               aria-hidden="true"
               alt = "icon"
             /> */}
-      <img src={  frontmatter[language].graph} alt="graph"  />
+            <div className="wrap">
+              <img src={  frontmatter[language].graph} alt="graph"  />
+            </div>
 
           </div>
 

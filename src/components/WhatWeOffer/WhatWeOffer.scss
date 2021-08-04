@@ -78,44 +78,54 @@
 		position: relative;
 		width: 100%;
 		z-index: 1;
-		
 
-		&::before {
-			background: #1a1b1b;
-			border-radius: 10px;
+		.wrap {
+			position: relative;
 
-			box-shadow: -20px 20px 60px #101112;
-			content: '';
-			height: calc(100% - 120px);
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-			z-index: -2;
-
-			@include mob() {
-				height: 0;
-				width: 0;
-			}
-		}
-
-		&::after {
-			background: #232425;
-			border-radius: 10px;
-			box-shadow: -20px 20px 60px #101112;
-			content: '';
-			height: calc(100% - 120px);
-			left: 30px;
-			position: absolute;
-			top: 30px;
-			width: calc(100% - 60px);
-			z-index: -1;
-
-			@include mob() {
-				left: 40px;
-				width: calc(100% - 80px);
+			img {
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
 			}
 
+			&::after {
+				background: #232425;
+				border-radius: 10px;
+				box-shadow: -20px 20px 60px #101112;
+				content: '';
+				height: 100%;
+				left: -30px;
+				position: absolute;
+				top: -30px;
+				width: calc(100% + 60px);
+				z-index: -1;
+	
+				@include mob() {
+					height: calc(100% + 40px);
+					left: -20px;
+					top: -20px;
+					width: calc(100% + 40px);
+				}
+			}
+
+			&::before {
+				background: #1a1b1b;
+				border-radius: 10px;
+	
+				box-shadow: -20px 20px 60px #101112;
+				content: '';
+				height: 100%;
+				left: -60px;
+				position: absolute;
+				top: -60px;
+				width: calc(100% + 120px);
+				z-index: -2;
+	
+				@include mob() {
+					height: 0;
+					width: 0;
+				}
+			}
 		}
 
 	}

@@ -3,7 +3,7 @@ import './Select.scss';
 import classnames from 'classnames';
 import ArrowFooter from "../../images/ArrowFooter"
 
-const Select = ({options,placeholder, currentValue, error, setCurrentValue}) => {
+const Select = ({options,placeholder, error, setCurrentValue}) => {
   const [selectorIsVisible, setSelectorIsVisible] = useState(false);
   const [selectOption, setOptionSelect] = useState(placeholder);
 
@@ -34,12 +34,11 @@ const Select = ({options,placeholder, currentValue, error, setCurrentValue}) => 
     <>
     <div className={selectorClassName}>
       <button type="button" onClick={handleSelector} className="form-selector__button">
-        {/* {currentValue || placeholder} */}
         {selectOption}
         <ArrowFooter className={buttonArrow} />
       </button>
       <ul className={listClassName}>
-        {options.map((option) => (
+        {options.map(({option}) => (
           <li key={Math.random()} className="form-selector__list-item">
             <button
               type="button"

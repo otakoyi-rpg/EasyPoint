@@ -17,6 +17,8 @@
 
 		&-menu{
 			margin-right: 30px;
+			position: relative;
+			z-index: 1;
 
 			@include mob-tab(){
 				margin-bottom: 20px;
