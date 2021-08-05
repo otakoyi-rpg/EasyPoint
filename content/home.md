@@ -13,6 +13,7 @@ en:
     - icon: /img/baraille-garments-logo.svg
     - icon: /img/euyira-logo.svg
     - icon: /img/becos-logo.svg
+  button_url: https://otakoyi.com/
 jp:
   title_before: あなたの顧客にさえ与える
   mark_text: その他の理由
@@ -26,4 +27,5 @@ jp:
     - icon: /img/baraille-garments-logo.svg
     - icon: /img/euyira-logo.svg
     - icon: /img/becos-logo.svg
+  button_url: https://otakoyi.com/
 ---

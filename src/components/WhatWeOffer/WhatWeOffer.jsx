@@ -45,6 +45,7 @@ const WhatWeOffer = () => {
                   cont
                 }
                 button
+                button_url
               }
               en {
                 background
@@ -60,6 +61,7 @@ const WhatWeOffer = () => {
                   cont
                 }
                 button
+                button_url
               }
             }
           }
@@ -146,7 +148,7 @@ const WhatWeOffer = () => {
               ))}
             </ul>
             <div className="what-we-offer__content-custom-button">
-              <Button text={frontmatter[language].button} type="primaryViolet" />
+              <Button text={frontmatter[language].button} type="primaryViolet" href= {frontmatter[language].button_url} />
             </div>
           </div>
         </div>

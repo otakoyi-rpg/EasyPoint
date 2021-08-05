@@ -2,6 +2,7 @@
 en:
   double_second: Widget
   double_first: Custom integration
+  button_url: https://otakoyi.com/
   background: /img/whatweofferbackground.png
   graph: /img/whatweoffergraph.png
   button: Try now
@@ -25,6 +26,7 @@ en:
 jp:
   double_second: ウィジェット
   double_first: カスタム統合
+  button_url: https://otakoyi.com/
   background: /img/whatweofferbackground.png
   graph: /img/whatweoffergraph.png
   button: 今すぐやってみて下さい

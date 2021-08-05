@@ -254,12 +254,19 @@
 	@include response(max, 770) {
 		@include fluid-size('left', 577px, 770px, 0, 60px);
 	}
+
+	@include tab(){
+		left: 75px;
+	}
 }
 
 .feedback .swiper-button-next {
 	right: 0;
 	@include response(max, 770) {
 		@include fluid-size('right', 577px, 770px, 0, 60px);
+	}
+	@include tab(){
+		right: 75px;
 	}
 }
 

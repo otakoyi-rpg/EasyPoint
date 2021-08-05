@@ -37,6 +37,7 @@ const Home = () => {
             mark_text
             subtitle
             button
+            button_url
             home_brands {
               icon
             }
@@ -47,6 +48,7 @@ const Home = () => {
             mark_text
             subtitle
             button
+            button_url
             home_brands {
               icon
             }
@@ -79,6 +81,7 @@ const Home = () => {
               text={frontmatter[language].button}
               type="primaryViolet"
               className="home__button"
+              href = {frontmatter[language].button_url}
             />
           </div>
         </div>

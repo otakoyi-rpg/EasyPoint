@@ -51,6 +51,7 @@ collections:
               - {label: "Title after mark text", name: "title_after", widget: "string", i18n: true}
               - {label: "Subtitle", name: "subtitle", widget: "string", i18n: true}
               - {label: "Home Button", name: "button", widget: "string", i18n: true}
+              - {label: "Home Button url", name: "button_url", widget: "string", i18n: duplicate}
               - label: "Home brands"
                 name: "home_brands"
                 widget: list
@@ -127,6 +128,7 @@ collections:
               - {label: "Item status", name: "status", widget: "boolean", i18n: true}
               - {label: "Item content", name: "cont", widget: "string", i18n: true}
           - {label: "Button text", name: "button", widget: "string", i18n: true}
+          - {label: "Button text url", name: "button_url", widget: "string", i18n: duplicate}
       - label: "Benefits"
         name: "benefits"
         file: "content/benefits.md"
