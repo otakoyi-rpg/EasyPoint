@@ -5,6 +5,7 @@
 .pricing {
 	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
 	position: relative;
+	overflow: hidden;
 
 	&__background {
 		height: 100%;
