@@ -38,6 +38,7 @@ const Faq = () => {
                   }
                 }
                 button
+                button_url
               }
               en {
                 title
@@ -49,6 +50,7 @@ const Faq = () => {
                   }
                 }
                 button
+                button_url
               }
             }
           }

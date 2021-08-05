@@ -34,7 +34,7 @@
 		}
 
 		&-menu-button-btn {
-			width: 100%;
+			width: 80%;
 			@include fluid-size('margin-top', $min-vw, $max-vw, 20px, 30px);
             
 			@include mob-tab() {

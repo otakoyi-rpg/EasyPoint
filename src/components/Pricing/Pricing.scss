@@ -1,285 +1,287 @@
-@import "../../assets/variables.scss";
-@import "../../assets/mixins.scss";
-@import "../../assets/typography.scss";
+@import '../../assets/variables.scss';
+@import '../../assets/mixins.scss';
+@import '../../assets/typography.scss';
 
 .pricing {
-  @include fluid-size("padding-top", $min-vw, $max-vw, 80px, 140px);
-  position: relative;
+	@include fluid-size('padding-top', $min-vw, $max-vw, 80px, 140px);
+	position: relative;
 
-  &__background {
-    height: 100%;
-    left: 0;
-    position: absolute !important;
-    top: 0;
-    width: 100%;
-    z-index: -1;
+	&__background {
+		height: 100%;
+		left: 0;
+		position: absolute !important;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+    object-fit: cover;
 
-    img {
-      object-position: top;
-    }
-  }
+		img {
+			object-position: top;
+		}
+	}
 
-  &__header {
-    align-items: center;
-    color: $white;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    max-width: 850px;
-    text-align: center;
+	&__header {
+		align-items: center;
+		color: $white;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		max-width: 850px;
+		text-align: center;
 
-    &-anchor {
-      @extend .label-primary;
-      background: $dark01;
+		&-anchor {
+			@extend .label-primary;
+			background: $dark01;
 
-      border-radius: 2px;
-      margin: 0;
-      padding: 4px 10px;
-    }
+			border-radius: 2px;
+			margin: 0;
+			padding: 4px 10px;
+		}
 
-    &-title {
-      @extend h2;
-      @include fluid-size("margin-top", $min-vw, $max-vw, 10px, 15px);
-      margin: 0;
-    }
+		&-title {
+			@extend h2;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 15px);
+			margin: 0;
+		}
 
-    &-text {
-      @extend .text-main;
-      @include fluid-size("margin-top", $min-vw, $max-vw, 10px, 20px);
-      @include fluid-size("margin-bottom", $min-vw, $max-vw, 40px, 60px);
-      color: $white08;
-      margin: 0;
-      max-width: 630px;
-    }
-  }
+		&-text {
+			@extend .text-main;
+			@include fluid-size('margin-top', $min-vw, $max-vw, 10px, 20px);
+			@include fluid-size('margin-bottom', $min-vw, $max-vw, 40px, 60px);
+			color: $white08;
+			margin: 0;
+			max-width: 630px;
+		}
+	}
 
-  &__content {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 -20px;
-    padding: 0 -15px;
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -20px;
+		padding: 0 -15px;
 
-    @include tab() {
-      flex-wrap: wrap;
-    }
+		@include tab() {
+			flex-wrap: wrap;
+		}
 
-    @include mob() {
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-    }
+		@include mob() {
+			justify-content: center;
+			margin: 0;
+			padding: 0;
+		}
 
-    &-block {
-      background: #1a1b1b;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      box-shadow: -20px 20px 60px #101112;
-      box-sizing: border-box;
-      margin: 0 15px;
-      padding: 40px;
-      padding-bottom: 45px;
-      width: 25%;
+		&-block {
+			background: #1a1b1b;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			border-radius: 10px;
+			box-shadow: -20px 20px 60px #101112;
+			box-sizing: border-box;
+			margin: 0 15px;
+			padding: 40px;
+			padding-bottom: 45px;
+			width: 25%;
 
-      &-description {
-        @extend .label-primary-price;
-        color: $white05;
-      }
+			&-description {
+				@extend .label-primary-price;
+				color: $white05;
+			}
 
-      @include tab-des() {
-        padding: 15px;
-      }
+			@include tab-des() {
+				padding: 15px;
+			}
 
-      @include tab() {
-        // width: 45%;
-        @include fluid-size("width", 577px, 960px, 260px, 450px);
-        margin-bottom: 30px;
-        padding: 40px;
-        padding-bottom: 89px;
-      }
+			@include tab() {
+				// width: 45%;
+				@include fluid-size('width', 577px, 960px, 260px, 450px);
+				margin-bottom: 30px;
+				padding: 40px;
+				padding-bottom: 89px;
+			}
 
-      @include mob() {
-        max-width: 98.5%;
-        padding: 40px;
-        @include fluid-size("width", 320px, 400px, 290px, 330px);
-      }
-    }
+			@include mob() {
+				max-width: 98.5%;
+				padding: 40px;
+				@include fluid-size('width', 320px, 400px, 290px, 330px);
+			}
+		}
 
-    &-block-name {
-      @extend .text-secondary;
-      color: $white05;
-      // margin-top: 15px;
+		&-block-name {
+			@extend .text-secondary;
+			color: $white05;
+			// margin-top: 15px;
 
-      @include tab-des() {
-        margin-top: 0;
-      }
-    }
+			@include tab-des() {
+				margin-top: 0;
+			}
+		}
 
-    &-block-price {
-      margin-bottom: 10px;
-      margin-top: 15px;
+		&-block-price {
+			margin-bottom: 10px;
+			margin-top: 15px;
 
-      &-cost {
-        color: $white;
-        display: inline;
-        padding: 0;
-        @extend h2;
-        @include fluid-type(577px, 720px, 40px, 56px);
-      }
+			&-cost {
+				color: $white;
+				display: inline;
+				padding: 0;
+				@extend h2;
+				@include fluid-type(577px, 720px, 40px, 56px);
+			}
 
-      &-period {
-        @extend .text-main;
-        color: $white05;
-      }
-    }
+			&-period {
+				@extend .text-main;
+				color: $white05;
+			}
+		}
 
-    &-block-list {
-      color: $white05;
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      margin: 0;
-      margin-top: 25px;
-      padding: 0;
-      @extend .text-secondary;
-    }
+		&-block-list {
+			color: $white05;
+			display: flex;
+			flex-direction: column;
+			list-style: none;
+			margin: 0;
+			margin-top: 25px;
+			padding: 0;
+			@extend .text-secondary;
+		}
 
-    &-block-list-item {
-      align-items: flex-start;
-      display: flex;
+		&-block-list-item {
+			align-items: flex-start;
+			display: flex;
 
-      @include tab() {
-        svg {
-          height: 23px !important;
-          width: 23px !important;
-        }
-      }
+			@include tab() {
+				svg {
+					height: 23px !important;
+					width: 23px !important;
+				}
+			}
 
-      &:not(:last-child) {
-        margin-bottom: 15px;
+			&:not(:last-child) {
+				margin-bottom: 15px;
 
-        @include tab() {
-          margin-bottom: 15px;
-        }
+				@include tab() {
+					margin-bottom: 15px;
+				}
 
-        @include mob() {
-          margin-bottom: 15px;
-        }
-      }
+				@include mob() {
+					margin-bottom: 15px;
+				}
+			}
 
-      &-text {
-        margin-left: 15px;
-      }
+			&-text {
+				margin-left: 15px;
+			}
 
-      svg {
-        flex: 0 0 auto;
-        // @include tab() {
-        // 	height: 15px;
-        // 	width: 15px;
-        // }
+			svg {
+				flex: 0 0 auto;
+				// @include tab() {
+				// 	height: 15px;
+				// 	width: 15px;
+				// }
 
-        // @include mob() {
-        // 	height: 25px;
-        // 	width: 25px;
-        // }
-      }
+				// @include mob() {
+				// 	height: 25px;
+				// 	width: 25px;
+				// }
+			}
 
-      &:last-child {
-        // margin-bottom: 30px;
+			&:last-child {
+				// margin-bottom: 30px;
 
-        @include mob() {
-          margin-bottom: unset;
-        }
-      }
-    }
+				@include mob() {
+					margin-bottom: unset;
+				}
+			}
+		}
 
-    &-block-active {
-      // svg{
-      // 	width: 25px;
-      // 	height: 25px;
-      // }
-      background: $purple-main;
-      position: relative;
+		&-block-active {
+			// svg{
+			// 	width: 25px;
+			// 	height: 25px;
+			// }
+			background: $purple-main;
+			position: relative;
 
-      .pricing__content-block-name {
-        color: $white;
-      }
+			.pricing__content-block-name {
+				color: $white;
+			}
 
-      .pricing__content-block-list {
-        color: $white08;
-      }
+			.pricing__content-block-list {
+				color: $white08;
+			}
 
-      &::before {
-        background-color: $white01;
-        color: $white;
-        content: "Most popular";
-        padding: 5px 10px;
-        position: absolute;
-        right: 30px;
-        top: 30px;
-        @extend .label-secondary;
-      }
-    }
-  }
+			&::before {
+				background-color: $white01;
+				color: $white;
+				content: 'Most popular';
+				padding: 5px 10px;
+				position: absolute;
+				right: 30px;
+				top: 30px;
+				@extend .label-secondary;
+			}
+		}
+	}
 
-  &__offer {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 70px;
-    position: relative;
-    @include fluid-size("padding-top", $min-vw, $max-vw, 40px, 70px);
-    @include fluid-size("padding-bottom", $min-vw, $max-vw, 40px, 70px);
-    @include fluid-size("padding-left", $min-vw, $max-vw, 55px, 110px);
-    @include fluid-size("padding-right", $min-vw, $max-vw, 55px, 110px);
+	&__offer {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 70px;
+		position: relative;
+		@include fluid-size('padding-top', $min-vw, $max-vw, 40px, 70px);
+		@include fluid-size('padding-bottom', $min-vw, $max-vw, 40px, 70px);
+		@include fluid-size('padding-left', $min-vw, $max-vw, 55px, 110px);
+		@include fluid-size('padding-right', $min-vw, $max-vw, 55px, 110px);
 
-    @include tab() {
-      align-items: flex-start;
-      flex-direction: column;
-      flex-wrap: wrap;
-    }
+		@include tab() {
+			align-items: flex-start;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
 
-    &-background {
-      background: #5936e3;
-      border-radius: 10px;
-      box-shadow: -20px 20px 60px #101112;
-      height: 100%;
-      left: 0;
-      position: absolute !important;
-      top: 0;
-      width: 100%;
-      z-index: -1;
-    }
+		&-background {
+			background: #5936e3;
+			border-radius: 10px;
+			box-shadow: -20px 20px 60px #101112;
+			height: 100%;
+			left: 0;
+			object-fit: cover;
+			position: absolute !important;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+		}
 
-    &-defenition {
-      max-width: 70%;
+		&-defenition {
+			max-width: 70%;
 
-      @include tab() {
-        max-width: 100%;
-      }
+			@include tab() {
+				max-width: 100%;
+			}
 
-      &-title {
-        @extend h3;
-        color: $white;
-        margin: 0;
-        max-width: 740px;
-      }
+			&-title {
+				@extend h3;
+				color: $white;
+				margin: 0;
+				max-width: 740px;
+			}
 
-      &-text {
-        @extend .text-main;
-        color: $white08;
-        margin: 0;
-        margin-top: 20px;
-      }
-    }
-  }
+			&-text {
+				@extend .text-main;
+				color: $white08;
+				margin: 0;
+				margin-top: 20px;
+			}
+		}
+	}
 }
 
 .pricing__offer-wrapper {
-  @include fluid-size("padding-bottom", $min-vw, $max-vw, 80px, 140px);
+	@include fluid-size('padding-bottom', $min-vw, $max-vw, 80px, 140px);
 }
 
 .label:nth-child(3) {
-  @include mob() {
-    margin-top: 20px;
-  }
+	@include mob() {
+		margin-top: 20px;
+	}
 }

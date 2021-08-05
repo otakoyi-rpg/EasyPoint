@@ -147,6 +147,7 @@ collections:
           - {label: "Benefit bottom title", name: "benefit_bottom_title", widget: "string", i18n: true}
           - {label: "Benefit bottom subtitle", name: "benefit_bottom_subtitle", widget: "string", i18n: true}
           - {label: "Benefit bottom button", name: "button", widget: "string", i18n: true}
+          - {label: "Benefit bottom button url", name: "button_url", widget: "string", i18n: duplicate}
           - {label: "Benefit bottom background", name: "background_bottom", widget: "image", i18n: duplicate}
       - label: "Pricing"
         name: "pricing"
@@ -181,6 +182,7 @@ collections:
           - {label: "Title Bottom", name: "title_bottom", widget: "string", i18n: true}
           - {label: "Subtitle Bottom", name: "subtitle_bottom", widget: "string", i18n: true}
           - {label: "Button Bottom", name: "button_bottom", widget: "string", i18n: true}
+          - {label: "Button Bottom url", name: "button_bottom_url", widget: "string", i18n: duplicate}
       - label: "Feedback"
         name: "feedback"
         file: "content/feedback.md"
@@ -233,7 +235,7 @@ collections:
                   - {label: "Title Accordion", name: "title", widget: "string", i18n: true}
                   - {label: "Subtitle Accordion", name: "content", widget: "string", i18n: true}
           - {label: "Button", name: "button", widget: "string", i18n: true}
-          - {label: "Button", name: "button_url", widget: "string", i18n: true}
+          - {label: "Button url", name: "button_url", widget: "string", i18n: duplicate}
       - label: "Contact"
         name: "contact"
         file: "content/contact.md"

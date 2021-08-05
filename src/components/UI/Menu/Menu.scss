@@ -79,7 +79,7 @@
 		position: relative;
 		transition: all 0.35s;
 		width: 100%;
-
+		cursor: pointer;
 		@extend .label-primary;
 
 		&:not(&--active):hover {

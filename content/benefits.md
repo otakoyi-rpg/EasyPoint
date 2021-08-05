@@ -1,10 +1,8 @@
 ---
 en:
-  anchor: Benefits
-  title: Loyalty is essential for growth, but oftentimes hard to maintain
-  subtitle: Creating an effective, engaging loyalty program is our goal at
-    EasyPoints, and with over 10 different features, you’ll be sure to build the
-    perfect program for both you and your customers.
+  button_url: https://otakoyi.com/
+  benefit_bottom_subtitle: EasyPoints makes earning and spending points  a
+    complete breeze, allowing you to grow your  ecommerce business.
   benefits_block:
     - image: /img/benefitsimg1.png
       title: Reward more than just purchases
@@ -26,14 +24,16 @@ en:
         with your shop. Don’t just create loyal customers — create a loyal
         community!
   benefit_bottom_title: EasyPoints offers a loyalty system that rewards customers
-  benefit_bottom_subtitle: EasyPoints makes earning and spending points  a
-    complete breeze, allowing you to grow your  ecommerce business.
   button: Shopify App Store
+  anchor: Benefits
+  subtitle: Creating an effective, engaging loyalty program is our goal at
+    EasyPoints, and with over 10 different features, you’ll be sure to build the
+    perfect program for both you and your customers.
+  title: Loyalty is essential for growth, but oftentimes hard to maintain
   background_bottom: /img/benefitsbackground.png
 jp:
-  anchor: 利点
-  title: 忠誠心は成長に不可欠ですが、維持するのが難しいことがよくあります
-  subtitle: EasyPointsの目標は、効果的で魅力的なロイヤルティプログラムを作成することです。また、10を超えるさまざまな機能を備えているため、あなたとあなたの顧客の両方に最適なプログラムを確実に構築できます。
+  button_url: https://otakoyi.com/
+  benefit_bottom_subtitle: EasyPointsはポイントの獲得と支出を行います 完全なそよ風、あなたのeコマースビジネスを成長させることができます。
   benefits_block:
     - image: /img/benefitsimg1.png
       title: 購入以上の報酬
@@ -50,7 +50,9 @@ jp:
       text: EasyPointsを使用すると、ソーシャルメディアページの評価からショップでのアカウントの作成まで、カート以外のさまざまなアクションに対して顧客に報酬を与えることができます。
         忠実な顧客を作成するだけでなく、忠実なコミュニティを作成してください。
   benefit_bottom_title: EasyPointsは、顧客に報酬を与えるロイヤルティシステムを提供します
-  benefit_bottom_subtitle: EasyPointsはポイントの獲得と支出を行います 完全なそよ風、あなたのeコマースビジネスを成長させることができます。
   button: Shopifyアプリストア
+  anchor: 利点
+  subtitle: EasyPointsの目標は、効果的で魅力的なロイヤルティプログラムを作成することです。また、10を超えるさまざまな機能を備えているため、あなたとあなたの顧客の両方に最適なプログラムを確実に構築できます。
+  title: 忠誠心は成長に不可欠ですが、維持するのが難しいことがよくあります
   background_bottom: /img/benefitsbackground.png
 ---

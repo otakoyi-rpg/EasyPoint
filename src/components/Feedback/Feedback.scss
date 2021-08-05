@@ -132,10 +132,11 @@
 		&-background {
 			height: 100%;
 			left: 0;
+			object-fit: cover;
 			position: absolute !important;
 			top: 0;
 			width: 100%;
-			z-index: swip-1;
+			z-index: -1;
 		}
 
 		&-content {

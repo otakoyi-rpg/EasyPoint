@@ -49,6 +49,7 @@ en:
         - benefits_item: Setup included
         - benefits_item: Shopify integration
         - benefits_item: " Shopify cart adjustment"
+  button_bottom_url: https://otakoyi.com
   benefits_block:
     - pricing_benefits:
         - benefits_item: Up to 500 active* customers
@@ -158,6 +159,7 @@ jp:
         - benefits_item: セットアップが含まれています
         - benefits_item: Shopifyの統合
         - benefits_item: Shopifyカートの調整
+  button_bottom_url: https://otakoyi.com
   benefits_block:
     - pricing_benefits:
         - benefits_item: 最大500人のアクティブ*顧客

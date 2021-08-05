@@ -18,6 +18,7 @@
 	&__background {
 		height: 100%;
 		left: 0;
+		object-fit: cover;
 		position: absolute !important;
 		top: 0;
 		width: 100%;
@@ -76,12 +77,12 @@
 	&__data-user {
 		display: flex;
 		
-		label:first-child{
+		label:first-child {
 			margin-right: 30px;
 
-			@include mob(){
-				margin-right: unset;
+			@include mob() {
 				margin-bottom: 15px;
+				margin-right: unset;
 			}
 		}
 

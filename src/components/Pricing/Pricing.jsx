@@ -49,7 +49,8 @@ const Pricing = () => {
                 background_bottom
                 title_bottom
                 subtitle_bottom
-                button
+                button_bottom
+                button_bottom_url
               }
               en {
                 background
@@ -71,7 +72,8 @@ const Pricing = () => {
                 background_bottom
                 title_bottom
                 subtitle_bottom
-                button
+                button_bottom
+                button_bottom_url
               }
             }
           }
@@ -92,7 +94,11 @@ const Pricing = () => {
         alt="background"
       /> */}
 
-      <img src = {frontmatter[language].background} alt = ''  className="pricing__background" />
+      <img
+        src={frontmatter[language].background}
+        alt=""
+        className="pricing__background"
+      />
       <div className="container">
         <div className="pricing__header">
           <p
@@ -114,12 +120,12 @@ const Pricing = () => {
             data-aos="fade-up"
             data-aos-delay="250"
           >
-           {frontmatter[language].subtitle}
+            {frontmatter[language].subtitle}
           </p>
         </div>
         <div className="pricing__content">
           {frontmatter[language].pricing_benefits_block.map(elem => (
-             <div
+            <div
               className={elem.active ? activeClass : blockClass}
               key={elem.name + elem.cost + elem.period}
               data-aos="fade-up"
@@ -139,7 +145,7 @@ const Pricing = () => {
                 {elem.permonth} {elem.after}
               </div>
               <ul className="pricing__content-block-list">
-                {elem.pricing_benefits.map(({benefits_item}) => (
+                {elem.pricing_benefits.map(({ benefits_item }) => (
                   <li
                     className="pricing__content-block-list-item"
                     key={benefits_item}
@@ -163,17 +169,24 @@ const Pricing = () => {
               className="pricing__offer-background"
               alt="offer background"
             /> */}
-            <img src = {frontmatter[language].background_bottom} className = 'pricing__offer-background' />
+            <img
+              src={frontmatter[language].background_bottom}
+              className="pricing__offer-background"
+            />
             <div className="pricing__offer-defenition">
               <h3 className="pricing__offer-defenition-title">
                 {frontmatter[language].title_bottom}
               </h3>
               <p className="pricing__offer-defenition-text">
-              {frontmatter[language].subtitle_bottom}
+                {frontmatter[language].subtitle_bottom}
               </p>
             </div>
             <div className="pricing__offer-defenition">
-              <Button type="secondary" text= {frontmatter[language].button}/>
+              <Button
+                type="secondary"
+                text={frontmatter[language].button_bottom}
+                href={frontmatter[language].button_bottom_url}
+              />
             </div>
           </div>
         </div>

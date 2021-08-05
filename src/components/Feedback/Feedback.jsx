@@ -221,6 +221,7 @@ const Feedback = () => {
               data-aos-offset="500"
             >
               {/* <GatsbyImage image={nodes[3].gatsbyImageData} alt="phone" /> */}
+              <img src={frontmatter[language].bottom_image} alt="phone" />
             </div>
           </div>
         </div>

@@ -67,17 +67,11 @@ const HowItWorks = () => {
 
 
 
-  // const image = getImage(data.bg.gatsbyImageData);
-  // const poster = getImage(data.poster.gatsbyImageData);
+
 
   return (
     <div className="how-it-works" >
-      {/* <GatsbyImage
-        className="how-it-works__background"
-        image={image}
-        aria-hidden="true"
-        alt="background"
-      /> */}
+
   <img src={frontmatter[language].background} alt="" className = "how-it-works__background" />
       <div className="container">
         <div className = "how-it-works__video" data-aos="fade-up" >
